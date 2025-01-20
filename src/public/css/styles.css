@@ -1,0 +1,25 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header, footer{
+    background-color: orange;
+    color: white;
+}
+
+
+.title {
+    padding: 15px;
+}
+
+body {
+    background-color: rgb(255, 229, 180);
+    color: rgb(230, 149, 0);
+}
+
+footer {
+    min-height: 250px;
+    margin-top: 50px;
+}
