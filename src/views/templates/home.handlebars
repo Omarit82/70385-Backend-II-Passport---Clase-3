@@ -1,13 +1,13 @@
 <h2 class="text-center">Nuestros discos:</h2>
-<div class="d-flex">
+<div class="d-flex flex-wrap justify-content-around">
     {{#each products}}
-    <div class="card w-50" >
+    <div class="card m-1" >
         <img src="" class="card-img-top" alt="">
         <div class="card-body">
             <h5 class="card-title">{{title}}</h5>
             <p class="card-text">{{autor}}</p>
             <p class="card-text">{{year}}</p>
-            <a href="" class="btn btn-primary m-auto">View more</a>
+            <a href="/product/{{_id}}" class="btn btn-primary m-auto">View more</a>
         </div>
     </div>
     {{/each}}

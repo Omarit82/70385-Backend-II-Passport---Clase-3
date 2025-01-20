@@ -26,7 +26,7 @@ app.use(express.json())
 app.use(session({
     store: MongoStore.create({
         mongoUrl:"mongodb+srv://roselliomar82:Boeing747-8i@clusteromarit.z0kfa.mongodb.net/?retryWrites=true&w=majority&appName=ClusterOmarit",
-        ttl:15
+        ttl:30
     }),
     secret:"codigo",
     resave:true,

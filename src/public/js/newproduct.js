@@ -21,9 +21,9 @@ document.addEventListener('DOMContentLoaded',()=>{
             },
             body: JSON.stringify(payload), // Convierte el objeto en JSON
         }).then((response)=>{
-            console.log(response)
+            console.log(response)  // swal
         }).catch((e)=>{
-            console.log(e)
+            console.log(e)  // swal
         }).finally(()=>{
             prod.reset()
         })
