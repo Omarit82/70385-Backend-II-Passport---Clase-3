@@ -19,8 +19,8 @@ document.addEventListener('DOMContentLoaded',()=>{
         }).catch((error) =>{
             console.log(error);
         }).finally(()=>{
-           // form.reset();
-            //window.location.href = '/'
+            form.reset();
+            window.location.href = '/'
         })
     })
 })

@@ -1,3 +1,6 @@
+{{#if session.rol}}
+    <nav class="nav"><a href="/new-product" class="mt-2 ms-2"><button class="btn btn-primary"> Add new product</button></a></nav>
+{{/if}}
 <h2 class="text-center">Nuestros discos:</h2>
 <div class="d-flex flex-wrap justify-content-around">
     {{#each products}}
@@ -5,8 +8,8 @@
         <img src="" class="card-img-top" alt="">
         <div class="card-body">
             <h5 class="card-title">{{title}}</h5>
-            <p class="card-text">{{autor}}</p>
-            <p class="card-text">{{year}}</p>
+            <p class="card-text">Autor: {{autor}}</p>
+            <p class="card-text">Year: {{year}}</p>
             <a href="/product/{{_id}}" class="btn btn-primary m-auto">View more</a>
         </div>
     </div>
