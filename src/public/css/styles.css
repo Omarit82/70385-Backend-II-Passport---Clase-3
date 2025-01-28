@@ -33,7 +33,9 @@ header, footer{
     background-color: orange;
     color: white;
 }
-
+#thumbnail{
+    display:none;
+}
 
 .title {
     padding: 15px;

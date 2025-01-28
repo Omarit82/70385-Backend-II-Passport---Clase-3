@@ -12,7 +12,8 @@ document.addEventListener('DOMContentLoaded',()=>{
             genere:data.get('genere'),
             price:data.get('price'),
             stock:data.get('stock'),
-            code:data.get('code')
+            code:data.get('code'),
+            thumbnail:thumbnail.get('thumbnail')
         }
         fetch('api/products',{
             method: "POST", // Método HTTP

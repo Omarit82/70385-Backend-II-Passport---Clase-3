@@ -1,5 +1,5 @@
 import passport from "passport";
-import { register,login } from "../controllers/users.controller.js";
+import { register,login } from "../controllers/sessions.controller.js";
 import { Router } from "express";
 
 const userRouter = Router();

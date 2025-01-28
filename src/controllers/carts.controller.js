@@ -27,3 +27,29 @@ export const createCart = async (req, res) => {
         res.status(500).send({message: "db error",error:error})
     }
 }
+
+export const getCart = async (req,res) => {
+    try {
+        const cid = req.params.id;
+        const cart = cartModel.findById(cid);
+        res.status(200).send({cart:cart})
+    } catch (error) {
+        res.status(500).send({message:"Error al comunicar con la DB",error:error});
+    }
+}
+
+export const deleteProductCart = (req,res) => {
+
+}
+
+export const deleteCart = (req,res) => {
+
+}
+
+export const updateProductCart = (req,res) => {
+
+}
+
+export const updateQtyProductCart = (req,res) =>{
+    
+}

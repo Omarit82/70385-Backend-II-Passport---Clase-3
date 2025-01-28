@@ -1,6 +1,6 @@
 import passport from "passport";
 import local from 'passport-local';
-import userModel from "../models/users.model.js";
+import userModel from "../models/sessions.model.js";
 import { encriptar,desencriptar } from "../utils/bcrypt.js";
 
 const localStrategy = local.Strategy;

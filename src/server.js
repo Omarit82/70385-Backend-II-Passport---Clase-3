@@ -4,7 +4,7 @@ import mongoose from 'mongoose';
 import passport from 'passport';
 import MongoStore from 'connect-mongo';
 import { engine } from 'express-handlebars';
-import userRouter from './routes/users.routes.js';
+import userRouter from './routes/sessions.routes.js';
 import viewsRouter from './routes/views.routes.js'
 import productsRouter from './routes/products.routes.js';
 import initializePassport from './config/passport.config.js';
@@ -18,6 +18,7 @@ app.engine('handlebars',engine());
 app.set('views', __dirname+'/views');
 app.set('view engine', 'handlebars');
 app.use('/public', express.static(__dirname+'/public'))
+
 
 
 /**USO DE SESSION**/

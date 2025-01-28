@@ -2,7 +2,12 @@ import productModel from "../models/products.model.js";
 
 export const getProducts = async (req,res) => {
     try {
-        const products = await productModel.find();
+        const {limit, page, metFilter, filter, method,metOrder, order} = req.query;
+        const pag = page !== undefined ? page:1;
+        const lim = limit !== undefined ? limit:10;
+        const met = metFilter !== undefined ? {[method]:filter} : {};
+        const ord = metOrder !== undefined ? {metOrder:order} : {};
+        const products = await productModel.paginate(met, {limit:lim,page:pag,ord});
         res.status(200).send({products:products})
     } catch (error) {
         res.status(400).send({message:"bad request",error:error})
@@ -40,7 +45,7 @@ export const updateProduct = async (req,res) => {
 
 export const addProduct = async (req,res) => {
     try {
-        const {title, autor,year,genere,price,stock,code} = req.body
+        const {title, autor,year,genere,price,stock,code,thumbnail} = req.body
         //chequeo si ya existe un producto con ese codigo
         const prod = await productModel.findOne({code:code});
         if(!prod){
@@ -51,7 +56,8 @@ export const addProduct = async (req,res) => {
                 genere:genere,
                 price:price,
                 stock:stock,
-                code:code
+                code:code,
+                thumbnail:thumbnail
             })
             res.status(201).send({message:"Product created Ok",product:newProduct})
         }else{
